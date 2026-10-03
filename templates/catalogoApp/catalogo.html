@@ -1,7 +1,7 @@
 {% extends 'inicio.html' %}
 {% load static %}
 
-{% block title %}Catalogo de Productos - Tienda Musical{% endblock %}
+{% block title %}Catálogo de Productos - Tienda Musical{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -53,7 +53,7 @@
         </div>
     </aside>
 
-    <!-- Columna derecha  -->
+    <!-- Columna derecha -->
     <section class="col-md-9">
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
@@ -67,17 +67,16 @@
                     </div>
 
                     <div class="card-body p-0 d-flex flex-column align-items-center">
-                        <h5 class="card-title fw-semibold fs-6 mb-1">Nombre del Instrumento</h5>
-                        <p class="fs-5 fw-bold text-dark mb-2">$000.000</p>
+                        <h5 class="card-title fw-semibold fs-6 mb-1">Guitarra Eléctrica</h5>
+                        <p class="fs-5 fw-bold text-dark mb-2">$450.000</p>
                         
-                        <button class="btn btn-turquesa px-4 shadow-sm">Comprar</button>
+                        <a href="{% url 'detalle_producto' %}" class="btn btn-turquesa px-4 shadow-sm">Comprar</a>
                     </div>
 
                 </div>
             </div>
 
         </div>
-
     </section>
 
 </div>

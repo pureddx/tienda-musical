@@ -21,4 +21,5 @@ from apps.catalogoApp import views as catalogo_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', catalogo_views.catalogo, name='inicio'),
+    path('detalle/', catalogo_views.detalle_producto, name='detalle_producto'),
 ]

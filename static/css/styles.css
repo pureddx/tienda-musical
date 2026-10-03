@@ -21,9 +21,10 @@
     border: none;
     padding: 6px 25px;
     font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
 }
 
-/* Cuando el cursor este por encima */
+/* Cuando el cursor esté por encima */
 .btn-turquesa:hover {
     background-color: #0097a7;
     color: white;
@@ -46,9 +47,25 @@
     color: #6c757d;
 }
 
-/* Imagenes */
+/* Imágenes */
 .product-img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+}
+
+
+/* Borde activo en las pestañas de Descripción e Información */
+.nav-tabs .nav-link.active {
+    border-bottom: 3px solid #00bcd4 !important;
+    color: #00bcd4 !important;
+}
+
+/* Sombra suave para las tarjetas al pasar el cursor */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
 }
