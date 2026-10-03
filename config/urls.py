@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from apps.catalogoApp import views as catalogo_views
+from apps.pedidosApp import views as pedidos_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', catalogo_views.catalogo, name='inicio'),
     path('detalle/', catalogo_views.detalle_producto, name='detalle_producto'),
+    path('carrito/', pedidos_views.ver_carrito, name='carrito'),
 ]

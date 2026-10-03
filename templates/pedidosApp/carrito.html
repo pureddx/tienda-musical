@@ -1,0 +1,146 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Carrito de Compras - Tienda Musical{% endblock %}
+
+{% block content %}
+<div class="container py-3" style="max-width: 1100px;">
+
+    <!-- Titulo de la pagina -->
+    <div class="d-flex align-items-center justify-content-between mb-4 border-bottom pb-2">
+        <h3 class="fw-bold text-dark mb-0">
+            <i class="fa-solid fa-cart-shopping me-2 text-info"></i>Carrito de Compras
+        </h3>
+        <a href="{% url 'inicio' %}" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+            <i class="fa-solid fa-arrow-left me-1"></i>Seguir comprando
+        </a>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Tabla de Productos Seleccionados -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="table-responsive p-3">
+                    <table class="table align-middle mb-0">
+                        <thead class="table-light">
+                            <tr class="small text-muted text-uppercase">
+                                <th scope="col">Producto</th>
+                                <th scope="col" class="text-center">Tipo</th>
+                                <th scope="col" class="text-center">Cantidad</th>
+                                <th scope="col" class="text-end">Precio</th>
+                                <th scope="col" class="text-end">Subtotal</th>
+                                <th scope="col" class="text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <!-- Producto 1: Venta -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-2 bg-light rounded me-3 text-center" style="width: 50px;">
+                                            <i class="fa-solid fa-guitar fa-2x text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-semibold mb-0 text-dark">Guitarra Stratocaster</h6>
+                                            <small class="text-muted">SKU: INSTR-2026-001</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge bg-success-subtle text-success border border-success">Venta</span>
+                                </td>
+                                <td class="text-center" style="width: 120px;">
+                                    <input type="number" class="form-control form-control-sm text-center rounded-pill" value="1" min="1">
+                                </td>
+                                <td class="text-end fw-semibold">$450.000</td>
+                                <td class="text-end fw-bold text-dark">$450.000</td>
+                                <td class="text-center">
+                                    <button class="btn btn-link text-danger p-0 border-0" title="Eliminar">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Producto 2: Arriendo -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-2 bg-light rounded me-3 text-center" style="width: 50px;">
+                                            <i class="fa-solid fa-sliders fa-2x text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-semibold mb-0 text-dark">Pedalera Boss ME-80</h6>
+                                            <small class="text-muted">Arriendo x 3 días</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge bg-info-subtle text-info border border-info">Arriendo</span>
+                                </td>
+                                <td class="text-center" style="width: 120px;">
+                                    <input type="number" class="form-control form-control-sm text-center rounded-pill" value="1" min="1">
+                                </td>
+                                <td class="text-end fw-semibold">$25.000/día</td>
+                                <td class="text-end fw-bold text-dark">$75.000</td>
+                                <td class="text-center">
+                                    <button class="btn btn-link text-danger p-0 border-0" title="Eliminar">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center p-3">
+                    <button class="btn btn-outline-danger btn-sm rounded-pill px-3">
+                        <i class="fa-solid fa-broom me-1"></i>Vaciar Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen del Pedido -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-3 p-3">
+                <h5 class="fw-bold text-dark mb-3 border-bottom pb-2">Resumen de Compra</h5>
+                
+                <div class="d-flex justify-content-between mb-2 text-muted">
+                    <span>Subtotal:</span>
+                    <span class="fw-semibold text-dark">$525.000</span>
+                </div>
+                
+                <div class="d-flex justify-content-between mb-2 text-muted">
+                    <span>IVA (19%):</span>
+                    <span class="fw-semibold text-dark">$99.750</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3 text-muted">
+                    <span>Envío:</span>
+                    <span class="text-success fw-semibold">Gratis</span>
+                </div>
+
+                <hr class="text-muted">
+
+                <div class="d-flex justify-content-between mb-4">
+                    <span class="fs-5 fw-bold text-dark">Total:</span>
+                    <span class="fs-4 fw-bold text-info">$624.750</span>
+                </div>
+
+                <button class="btn btn-turquesa w-100 py-2 shadow-sm mb-2">
+                    <i class="fa-solid fa-credit-card me-2"></i>Proceder al Pago
+                </button>
+
+                <p class="text-muted text-center small mb-0 mt-2">
+                    <i class="fa-solid fa-lock me-1 text-success"></i>Pago 100% seguro y garantizado
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

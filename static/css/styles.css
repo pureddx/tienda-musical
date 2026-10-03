@@ -24,7 +24,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-/* Cuando el cursor esté por encima */
+/* Cuando el cursor esté por encima del botón turquesa */
 .btn-turquesa:hover {
     background-color: #0097a7;
     color: white;
@@ -54,7 +54,6 @@
     object-fit: contain;
 }
 
-
 /* Borde activo en las pestañas de Descripción e Información */
 .nav-tabs .nav-link.active {
     border-bottom: 3px solid #00bcd4 !important;
@@ -68,4 +67,14 @@
 
 .card:hover {
     transform: translateY(-2px);
+}
+
+/* Estado base para los enlaces del footer */
+.hover-white {
+    transition: color 0.2s ease-in-out !important;
+}
+
+/* Cambio a blanco al pasar el mouse por los enlaces del footer */
+.hover-white:hover {
+    color: #ffffff !important;
 }

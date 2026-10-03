@@ -22,7 +22,7 @@
 
             <!-- Icono de guitarra -->
             <div class="d-flex align-items-center nav-side-box">
-                <a href="#" class="navbar-brand text-white fs-2 me-0">
+                <a href="{% url 'inicio' %}" class="navbar-brand text-white fs-2 me-0">
                     <i class="fa-solid fa-guitar"></i>
                 </a>
             </div>
@@ -36,7 +36,7 @@
 
             <!-- Iconos de carrito y usuario -->
             <div class="d-flex justify-content-end gap-3 text-white fs-4 nav-side-box">
-                <a href="#" class="text-white"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="{% url 'carrito' %}" class="text-white"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="#" class="text-white"><i class="fa-solid fa-user"></i></a>
             </div>
 
@@ -65,18 +65,18 @@
                     <h5 class="fw-bold text-uppercase mb-3">CATEGORÍAS</h5>
                     <div class="row small text-secondary">
                         <div class="col-md-4">
-                            <p class="mb-1">• Pianos</p>
-                            <p class="mb-1">• Teclados y Sintetizadores</p>
-                            <p class="mb-1">• Guitarras y Bajos</p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Pianos</a></p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Teclados y Sintetizadores</a></p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Guitarras y Bajos</a></p>
                         </div>
                         <div class="col-md-4">
-                            <p class="mb-1">• Pedales y Efectos</p>
-                            <p class="mb-1">• Audio Profesional</p>
-                            <p class="mb-1">• Micrófonos</p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Pedales y Efectos</a></p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Audio Profesional</a></p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Micrófonos</a></p>
                         </div>
                         <div class="col-md-4">
-                            <p class="mb-1">• Baterías y Percusión</p>
-                            <p class="mb-1">• Accesorios</p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Baterías y Percusión</a></p>
+                            <p class="mb-1">• <a href="{% url 'inicio' %}" class="text-secondary text-decoration-none hover-white">Accesorios</a></p>
                         </div>
                     </div>
                 </div>
