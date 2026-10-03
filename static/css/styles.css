@@ -1,0 +1,54 @@
+/* Color turquesa de la barra superior */
+.bg-turquesa {
+    background-color: #00bcd4 !important;
+}
+
+/* Ancho fijo para los lados de la barra (Guitarra e Íconos) */
+.nav-side-box {
+    width: 150px;
+}
+
+/* Ancho máximo y centrado del buscador */
+.nav-search-box {
+    max-width: 550px;
+}
+
+/* Botón turquesa para los productos */
+.btn-turquesa {
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 6px 25px;
+    font-weight: 500;
+}
+
+/* Cuando el cursor este por encima */
+.btn-turquesa:hover {
+    background-color: #0097a7;
+    color: white;
+}
+
+/* Contenedor de la foto/ícono en la tarjeta */
+.product-img-container {
+    height: 180px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Iconos de muestra */
+.product-icon-placeholder {
+    font-size: 3.5rem;
+    color: #6c757d;
+}
+
+/* Imagenes */
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
