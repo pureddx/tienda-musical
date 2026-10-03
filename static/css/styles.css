@@ -78,3 +78,10 @@
 .hover-white:hover {
     color: #ffffff !important;
 }
+
+/* Estado activo para los botones de las miniaturas */
+.thumb-btn.active {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+    border-color: #212529 !important;
+}

@@ -26,13 +26,13 @@
 
             <!-- Miniaturas Intercambiables -->
             <div class="d-flex justify-content-center gap-2">
-                <button type="button" class="btn btn-outline-secondary p-2 active" onclick="changeImage('fa-guitar')">
+                <button type="button" class="btn btn-outline-secondary p-2 thumb-btn active" onclick="changeImage('fa-guitar', this)">
                     <i class="fa-solid fa-guitar fa-2x"></i>
                 </button>
-                <button type="button" class="btn btn-outline-secondary p-2" onclick="changeImage('fa-sliders')">
+                <button type="button" class="btn btn-outline-secondary p-2 thumb-btn" onclick="changeImage('fa-sliders', this)">
                     <i class="fa-solid fa-sliders fa-2x"></i>
                 </button>
-                <button type="button" class="btn btn-outline-secondary p-2" onclick="changeImage('fa-compact-disc')">
+                <button type="button" class="btn btn-outline-secondary p-2 thumb-btn" onclick="changeImage('fa-compact-disc', this)">
                     <i class="fa-solid fa-compact-disc fa-2x"></i>
                 </button>
             </div>
@@ -185,11 +185,21 @@
 
 </div>
 
-<!-- JavaScript para cambiar la imagen -->
+<!-- JavaScript para cambiar la imagen y mover la clase active al botón correspondiente -->
 <script>
-function changeImage(iconClass) {
+function changeImage(iconClass, element) {
+    // 1. Cambia la imagen principal
     const mainImg = document.getElementById('mainProductImage');
     mainImg.className = `fa-solid ${iconClass} fa-10x text-secondary`;
+
+    // 2. Le quita la clase active a todas las miniaturas
+    const buttons = document.querySelectorAll('.thumb-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // 3. Se la asigna solo a la miniatura presionada
+    if (element) {
+        element.classList.add('active');
+    }
 }
 </script>
 {% endblock %}
